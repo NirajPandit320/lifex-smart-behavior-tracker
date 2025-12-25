@@ -15,11 +15,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    // Ensures navigation happens AFTER widget is built
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      Timer(const Duration(seconds: 2), () {
-        Navigator.pushReplacementNamed(context, '/dashboard');
-      });
+    Timer(const Duration(seconds: 2), () {
+      Navigator.pushReplacementNamed(context, '/dashboard');
     });
   }
 
