@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
 import 'features/splash/splash_screen.dart';
+import 'features/auth/login_screen.dart';
+import 'features/auth/signup_screen.dart';
 import 'features/dashboard/dashboard_screen.dart';
 
 void main() {
@@ -16,8 +18,14 @@ class LifeXApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'LifeX',
       theme: AppTheme.lightTheme,
+
+      // App starts from Splash Screen
       home: const SplashScreen(),
+
+      // App routes
       routes: {
+        '/login': (context) => const LoginScreen(),
+        '/signup': (context) => const SignupScreen(),
         '/dashboard': (context) => const DashboardScreen(),
       },
     );
